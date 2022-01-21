@@ -1,0 +1,10 @@
+.inputbox{
+    font-size: 2rem;
+    display: flex;
+    background-color: orange;
+    border-radius: 10%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;;
+   
+}
