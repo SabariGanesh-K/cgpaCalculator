@@ -29,18 +29,21 @@ class Meter extends React.Component {
               id="circulargauge"
               width="100%"
               height="100%"
-              background="#1F1B24"
+              background="#121212"
+          
             >
-              <AxesDirective style={{ background: "#1F1B24", fontSize: "0" }}>
+              <AxesDirective style={{ background: "#121212", fontSize: "1" }}>
                 <AxisDirective
+               
                   lineStyle={{
-                    width: 2,
-                    color: "red",
+                    width: 3,
+                    
+                    color: "white",
                   }}
-                  background="#1F1B24"
+                  background="#121212"
                 >
                   <PointersDirective>
-                    <PointerDirective value={gpa * 10}></PointerDirective>
+                    <PointerDirective value={gpa * 10} style = {{background:"red"}} color = "Red"></PointerDirective>
                   </PointersDirective>
                 </AxisDirective>
               </AxesDirective>

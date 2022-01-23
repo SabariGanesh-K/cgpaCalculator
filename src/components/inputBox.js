@@ -5,6 +5,7 @@ import "./inputBox.css";
 function InputBox(props) {
   const [credit, changeCredit] = useState(1);
   const [grade, changeGrade] = useState(10);
+  const [color,changeColor] = useState("orange")
   function handleCreditChange(event) {
     changeCredit(event.target.value);
   }
@@ -16,11 +17,20 @@ function InputBox(props) {
     props.list(props.id, credit, grade);
   }, [credit, grade]);
 
+  useEffect(()=>{
+    if (props.id%2===0){
+      changeColor("golden")
+  }
+  })
+
   return (
+
     <div style={{ padding: "5%" }}>
-      {props.id}
+        <div style = {{display:'flex', justifyContent:'center'}}>
+      <p className = "inputId">#{props.id + 1}</p>
+      </div>
       <form>
-        <label className="inputbox">
+        <label className="inputbox" style = {{backgroundColor:color}}>
           GRADE
           <select value={credit} onChange={handleCreditChange}>
             <option value={1}>1</option>
@@ -29,7 +39,10 @@ function InputBox(props) {
             <option value={4}>4</option>
           </select>
         </label>
-        <label className="inputbox">
+      
+        
+       
+        <label className="inputbox"  style = {{backgroundColor:color}}>
           <select value={grade} onChange={handleGradeChange}>
             <option value={10}>S</option>
             <option value={9}>A</option>

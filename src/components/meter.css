@@ -1,12 +1,13 @@
 .cgpa{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,"cursive";
-    font-size: 5rem;
+    font-family: 'Vujahday Script', cursive;
+    font-size: 400%;
     font-style: italic,cu;
     color: #259b24;
     
 }
 .comments{
     font-family: 'Vujahday Script', cursive;
-    font-size: 5rem;
+    font-size: 300%;
     color: #880E4F;
+    color:tomato
 }

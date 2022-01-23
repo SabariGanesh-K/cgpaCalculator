@@ -1,13 +1,19 @@
+.header{
+    background-color: #130f40;
+    background-image: linear-gradient(-315deg, #130f40 0%, #000000 74%);
+    
+}
 .title1{
     font-family: 'Vujahday Script', cursive;
-    font-size: 5rem;
-    color: #3700B3;
-    
+    font-size: 400%;
+   
+    color: #F50057;
 }
 .title2{
     font-family: 'Permanent Marker', cursive;
-    font-size: 5rem;
-    color: #F50057;
+    font-size: 400%;
+    color: #3700B3;
+
 }
 
 

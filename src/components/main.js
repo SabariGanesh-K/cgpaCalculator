@@ -8,13 +8,21 @@ import Calculator from "./input";
 class Main extends React.Component {
   render() {
     return (
+
       <div className="main">
+        
         <Header />
         <Calculator />
         <br />
         <br />
         <br />
-        <Footer />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <Footer  />
       </div>
     );
   }

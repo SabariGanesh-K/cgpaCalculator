@@ -17,6 +17,10 @@ function Calculator() {
     { credit: 1, grade: 10 },
     { credit: 1, grade: 10 },
     { credit: 1, grade: 10 },
+    { credit: 1, grade: 10 },
+    { credit: 1, grade: 10 },
+    { credit: 1, grade: 10 },
+    { credit: 1, grade: 10 },
   ];
   const handleNumberChange = (event) => {
     change_n(event.target.value);
@@ -24,7 +28,7 @@ function Calculator() {
 
   const showInput = () => {
     console.log(n);
-
+    changeNoOfSubVis("none")
     var range = [];
 
     for (var i = 0; i < n; i++) {
@@ -68,7 +72,7 @@ function Calculator() {
 
   const [Scorelist, alterList] = useState(initiate);
   const [calculateButton, showCalculateButton] = useState(<div></div>);
-
+  const [noOfSubVis,changeNoOfSubVis] = useState("block")
   const [temp, setTemp] = useState(<div></div>);
 
   const computeGpa = () => {
@@ -107,7 +111,7 @@ function Calculator() {
 
   const reset = () => {
     setTemp(<div></div>);
-
+    changeNoOfSubVis("block")
     change_n(1);
     alterList(initiate);
     showCalculateButton(<div></div>);
@@ -115,8 +119,7 @@ function Calculator() {
 
   return (
     <div style={{ padding: "5%", justifyContent: "center" }}>
-      <form>
-        <resetbutton className="noselect" onClick={reset}>
+              <resetbutton className="noselect" onClick={reset}>
           <span className="text">RESET</span>
           <span className="icon">
             <svg
@@ -129,7 +132,9 @@ function Calculator() {
             </svg>
           </span>
         </resetbutton>
+      <form style = {{display:noOfSubVis}}>
 
+        <br/>
         <div>
           <label className="inputbox">
             No of Subjects
@@ -143,11 +148,17 @@ function Calculator() {
               <option value={7}>7</option>
               <option value={8}>8</option>
               <option value={9}>9</option>
-              <option value={10}>1</option>
+              <option value={10}>10</option>
+              <option value={11}>11</option>
+              <option value={12}>12</option>
+              <option value={13}>13</option>
+              <option value={14}>14</option>
             </select>
           </label>
         </div>
+        <br/><br/>
         <div style={{ display: "flex", justifyContent: "center" }}>
+     
           <proceedbutton onClick={showInput}>
             <span>Go Ahead</span>
             <div className="liquid"></div>

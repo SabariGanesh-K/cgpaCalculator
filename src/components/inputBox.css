@@ -1,10 +1,21 @@
 .inputbox{
-    font-size: 2rem;
+    font-size: 150%;
     display: flex;
     background-color: orange;
     border-radius: 10%;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;;
+    justify-content: space-around;
+    font-weight: bold;
    
+}
+
+.inputId{
+    font-size: 150%;
+    color: white;
+    font-weight: bolder;
+    background-color: black;
+    width: 10%;
+    display: flex;
+    justify-content: center;
 }
